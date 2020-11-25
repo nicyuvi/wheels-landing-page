@@ -1,0 +1,124 @@
+//Nav Bar Pulldown Menu Links
+#nav {
+  position: relative;
+  background-color: $black;
+  .container-nav-main {
+    @extend %mainContainer;
+  }
+  //Nav Main Section
+  .nav-main {
+    background-color: $white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 0;
+    overflow: hidden;
+    transition: 0.3s ease all;
+    #nav-main-close-btn {
+      .fa-times {
+        visibility: hidden;
+      }
+    }
+    .nav-main-login {
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100vw;
+      max-width: 90%;
+      // padding: 0 1.5em;
+      visibility: hidden;
+
+      .driver-login {
+        @include flexCenter(row);
+        justify-content: space-between;
+        border-bottom: 1px solid black;
+        padding: 4em 0;
+        cursor: pointer;
+        &:hover a {
+          color: $offBlack;
+        }
+        &:hover i {
+          color: $offBlack;
+        }
+      }
+      .rider-login {
+        @extend .driver-login;
+      }
+    }
+
+    .nav-main-signup {
+      @extend .nav-main-login;
+      visibility: hidden;
+      .driver-signup {
+        @extend .driver-login;
+      }
+      .rider-signup {
+        @extend .driver-signup;
+      }
+    }
+
+    .nav-main-ham {
+      @extend .nav-main-login;
+      @include flexCenter(column);
+      align-items: flex-start;
+      visibility: hidden;
+      margin-top: 3em;
+      a {
+        margin-bottom: 1.5em;
+        width: 100%;
+        &:hover {
+          color: $offBlack;
+        }
+        &:last-child {
+          border-bottom: 1px solid black;
+          padding-bottom: 1.5em;
+        }
+      }
+    }
+    //js visibility active class
+    .active {
+      visibility: visible;
+      z-index: 1;
+    }
+  }
+  //js active class
+  .nav-main.active {
+    //covers entire screen
+    height: 100vh;
+    z-index: 1;
+  }
+}
+
+//Media Query Tablet and up
+@media screen and (min-width: 1136px) {
+  #nav {
+    .nav-main {
+      #nav-main-close-btn {
+        @include flexCenter(row);
+        justify-content: flex-end;
+        .fa-times.active {
+          z-index: 1;
+          visibility: visible;
+          padding: 20px;
+          border-radius: 100%;
+          width: fit-content;
+          cursor: pointer;
+          transition: 0.3s ease-in-out all;
+          &:hover {
+            background-color: $offWhite;
+          }
+        }
+      }
+      .nav-main-login {
+        max-width: 60%;
+        @include flexCenter(row);
+        justify-content: space-around;
+        .driver-login {
+          margin: 0 2em;
+          width: 50%;
+        }
+      }
+    }
+  }
+}

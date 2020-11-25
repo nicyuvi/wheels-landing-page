@@ -1,0 +1,78 @@
+#footer {
+  padding: 5em 0;
+  background-color: $black;
+  color: $white;
+  .container-footer {
+    @extend %mainContainer;
+    .brand {
+      font-size: 1.5rem;
+      @extend %footerMainSpacing;
+    }
+    h6 {
+      font-size: 1.5rem;
+      @extend %footerAsideSpacing;
+    }
+    .company-container {
+      @extend %footerMainSpacing;
+      @include flexCenter(column);
+      align-items: flex-start;
+      a {
+        color: $white;
+        @extend %fontAside;
+        @extend %footerAsideSpacing;
+        &:hover {
+          color: $offWhite;
+        }
+      }
+    }
+    .products-container {
+      @extend .company-container;
+    }
+    .contact-container {
+      @extend .company-container;
+      p {
+        @extend %footerAsideSpacing;
+      }
+    }
+    .social-links {
+      @extend %footerMainSpacing;
+
+      a {
+        color: $white;
+        margin-right: 2em;
+        padding: 10px;
+        transition: 0.3s ease all;
+        &:hover {
+          background-color: $offBlack;
+        }
+      }
+    }
+    .app-store-links {
+      @extend %footerMainSpacing;
+      a {
+        img {
+          height: 50px;
+        }
+      }
+    }
+    .footer-aside {
+      @extend %fontAside;
+      color: $offBlack;
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  #footer {
+    .container-footer {
+      .flex-container {
+        @include flexCenter(row);
+        justify-content: space-around;
+      }
+      .flex-container-aside {
+        @include flexCenter(row);
+        justify-content: space-between;
+      }
+    }
+  }
+}

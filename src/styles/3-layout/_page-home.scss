@@ -1,0 +1,24 @@
+//Home Page Layout
+#main-slider {
+  @extend %mainSectionLayout;
+}
+
+#restaurant-slider {
+  @extend %mainSectionLayout;
+}
+
+#cities-section {
+  @extend %mainSectionLayout;
+}
+
+#business-section {
+  @extend %mainSectionLayout;
+}
+
+#safety-section {
+  @extend %mainSectionLayout;
+}
+
+#signup-section {
+  margin-bottom: 2em;
+}

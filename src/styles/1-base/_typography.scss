@@ -1,0 +1,112 @@
+//Font-size, style, color, line-spacing, etc..
+
+//Global Styles
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @extend %fontHeader;
+}
+
+p {
+  @extend %fontMain;
+}
+
+a {
+  @extend %fontMain;
+  display: inline-block;
+  text-decoration: none;
+}
+
+//Nav Section
+#nav {
+  //Nav Header Section
+  nav {
+    ul {
+      .brand {
+        font-size: 1.5rem;
+        color: $white;
+      }
+      li {
+        a {
+          @extend %fontMain;
+          color: $white;
+        }
+        button {
+          .fa-user {
+            @extend %fontMain;
+            color: $white;
+          }
+          .fa-bars {
+            font-size: 0.85rem;
+            color: $white;
+          }
+          .fa-times {
+            font-size: 1.15rem;
+          }
+          .btn-signup {
+            @extend %fontMain;
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+  //Nav Main Section
+  .nav-main {
+    .fa-times {
+      font-size: 1.5rem;
+    }
+    .fa-arrow-right {
+      font-size: 2rem;
+    }
+    a {
+      @extend %fontHeader;
+      color: $black;
+    }
+  }
+}
+//End Nav Section
+
+/* Rider Signup */
+#signup-form {
+  .signup-header {
+    .brand-signup {
+      font-size: 2rem;
+    }
+    .signup-subtitle {
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+    .signup-text {
+      @extend %fontAside;
+    }
+  }
+  .signup-main {
+    label {
+      @extend %fontAside;
+    }
+    .form-submit-btn {
+      text-align: left;
+      font-size: 1.25rem;
+      font-weight: 500;
+    }
+  }
+}
+@media screen and (min-width: 1136px) {
+  #signup-form {
+    .brand-signup {
+      font-size: 3rem;
+    }
+    .signup-subtitle {
+      font-size: 2rem;
+    }
+    .signup-text {
+      font-size: 1.5rem;
+      font-weight: 300;
+    }
+  }
+}
+/* End Rider Signup */

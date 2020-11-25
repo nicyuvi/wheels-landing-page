@@ -1,0 +1,129 @@
+//Custom mixins and extentions
+
+//Flex Mixin
+@mixin flexCenter($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexGrid($columns) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 2em;
+  grid-row-gap: 2em;
+}
+
+//Main Button - using link tags with button role
+%mainBtn {
+  cursor: pointer;
+  padding: 0.75em 1.5em;
+  color: $white;
+  background-color: $black;
+  transition: 0.3s ease-in-out all;
+}
+
+//Secondary Button - border bottom transition
+%secondaryBtn {
+  color: $black;
+  display: inline-block;
+  padding-bottom: 0.25em;
+  margin: 0;
+  background: linear-gradient($black 0 0), linear-gradient(lightgray 0 0);
+  background-size: 0% 0.5px, 100% 0.5px;
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  transition: 0.3s;
+  &:hover {
+    background-size: 100% 0.5px;
+  }
+}
+
+//signup button
+%driver-login {
+  @include flexCenter(row);
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  padding: 4em 0;
+  cursor: pointer;
+  &:hover a {
+    color: $offBlack;
+  }
+  &:hover i {
+    color: $offBlack;
+  }
+}
+//Font typography Extensions
+%fontHeader {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+%fontMain {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+%fontAside {
+  font-size: 1rem;
+  font-weight: 400;
+}
+//Nav Container Extension
+%navContainer {
+  max-width: 90%;
+  min-width: 285px;
+  margin: auto;
+  padding-top: 1em;
+}
+
+@media screen and (min-width: 1136px) {
+  %navContainer {
+    max-width: 80%;
+    margin: auto;
+    padding-top: 1em;
+  }
+}
+
+//Main Container Extention
+%mainContainer {
+  max-width: 90%;
+  margin: auto;
+  padding-top: 1em;
+}
+
+@media screen and (min-width: 1136px) {
+  %mainContainer {
+    max-width: 70%;
+    margin: auto;
+    padding-top: 1em;
+  }
+}
+
+//Signup Form Container Extension
+%formContainer {
+  max-width: 90%;
+  margin: auto;
+}
+
+@media screen and (min-width: 650px) {
+  %formContainer {
+    max-width: 50%;
+    margin: auto;
+  }
+}
+
+//Layout Extention
+%mainSectionLayout {
+  margin-bottom: 10em;
+}
+
+//Footer Spacing
+%footerMainSpacing {
+  margin-bottom: 2em;
+}
+
+%footerAsideSpacing {
+  margin-bottom: 0.5em;
+}

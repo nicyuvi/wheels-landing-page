@@ -1,0 +1,50 @@
+#business-section {
+  .container-main {
+    @extend %mainContainer;
+    h5 {
+      margin-bottom: 0.5em;
+    }
+    .business-section-subtitle {
+      margin-bottom: 5em;
+    }
+    .business-services {
+      @include flexGrid(1);
+      grid-row-gap: 4em;
+      .services-card {
+        @include flexCenter(column);
+        justify-content: space-between;
+        align-items: flex-start;
+        img {
+          width: auto;
+          height: 150px;
+          margin: 0 auto 1em;
+        }
+        .services-card-title {
+          font-size: 1.5rem;
+          color: $offBlack;
+          margin-bottom: 0.5em;
+        }
+        .services-card-text {
+          @extend %fontAside;
+          color: $offBlack;
+          margin-bottom: 1em;
+        }
+
+        .services-btn {
+          @extend %fontAside;
+          @extend %secondaryBtn;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  #business-section {
+    .container-main {
+      .business-services {
+        @include flexGrid(3);
+      }
+    }
+  }
+}

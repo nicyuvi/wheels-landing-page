@@ -1,0 +1,42 @@
+//Hero Section
+#hero {
+  padding: 1em 0 2em;
+  background-color: $black;
+  .container-hero {
+    @extend %mainContainer;
+    color: $white;
+    .hero-img-container {
+      margin-bottom: 2em;
+    }
+    .hero-text-container {
+      h1 {
+        margin-bottom: 1em;
+      }
+
+      p {
+        margin-bottom: 2.25em;
+      }
+      .hero-btn {
+        @extend %mainBtn;
+        color: $black;
+        background-color: $white;
+        &:hover {
+          background-color: $offWhite;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1136px) {
+  .container-hero {
+    @include flexCenter(row-reverse);
+    justify-content: space-between;
+    .hero-img-container {
+      width: 50%;
+    }
+    .hero-text-container {
+      width: 40%;
+    }
+  }
+}

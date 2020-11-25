@@ -1,0 +1,115 @@
+//Nav Bar Header main links
+#nav {
+  position: relative;
+  background-color: $black;
+  .container-nav-header {
+    @extend %navContainer;
+  }
+  //Nav Header Section
+  nav {
+    @include flexCenter(row);
+    justify-content: space-between;
+    padding: 0 0 1em;
+    .brand {
+      padding: 10px;
+    }
+    ul {
+      @include flexCenter(row);
+      li {
+        a {
+          display: none;
+        }
+        button {
+          padding: 0;
+          margin-left: 10px;
+          background-color: transparent;
+          border: $black;
+          outline: black;
+          .fa-user {
+            border-radius: 100%;
+            padding: 10px;
+            cursor: pointer;
+            transition: 0.3s ease-in-out all;
+            &:hover {
+              background-color: $offBlack;
+            }
+            .btn-login {
+              display: none;
+            }
+          }
+
+          .btn-signup {
+            background-color: white;
+            padding: 10px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s ease-in-out all;
+            &:hover {
+              background-color: $offWhite;
+            }
+          }
+
+          .fa-bars {
+            border-radius: 100%;
+            padding: 10px;
+            cursor: pointer;
+            transition: 0.3s ease-in-out all;
+            &:hover {
+              background-color: $offBlack;
+            }
+          }
+          .fa-bars.active {
+            display: none;
+          }
+
+          .fa-times {
+            @extend .fa-bars;
+            padding: 8px 10px;
+            color: $white;
+            display: none;
+          }
+
+          .fa-times.active {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+//Media Query Tablet and up
+@media screen and (min-width: 1136px) {
+  #nav {
+    nav {
+      ul {
+        li {
+          a {
+            display: inline-block;
+            margin-left: 10px;
+            padding: 10px;
+            transition: 0.3s ease-in-out all;
+            border-radius: 25px;
+            &:hover {
+              background-color: $offBlack;
+            }
+          }
+
+          button {
+            .fa-user {
+              border-radius: 25px;
+              .btn-login {
+                display: inline-block;
+                color: $white;
+                padding-left: 5px;
+              }
+            }
+          }
+          #btn-ham {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

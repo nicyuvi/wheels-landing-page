@@ -1,0 +1,24 @@
+//Cities section
+#cities-section {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0) 39%,
+      rgba(255, 255, 255, 1) 80%
+    ),
+    url('../../../../assets/cities-img.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 90vh;
+  width: auto;
+  .container-main {
+    @extend %mainContainer;
+    h4 {
+      margin-bottom: 1em;
+    }
+    .cities-btn {
+      @extend %secondaryBtn;
+      @extend %fontAside;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/2621f4144f.js" crossorigin="anonymous"></script>
+  
+  <title>Wheels Driver Signup</title>
+</head>
+
+<body>
+  <!-- Form Section -->
+  <section id="driver-signup-form">
+    <div class="header-banner"></div>
+    <div class="container-form">
+      <div class="signup-header">
+        <div class="brand-container">
+          <h1 class="brand brand-signup">Wheels</h1>
+        </div>
+        <p class="signup-subtitle">Sign up to drive</p>
+        <p class="signup-text">Become a driver and enjoy the full benefits of Wheels</p>
+      </div>
+      <div class="signup-main">
+        <form class="signup-form" name="rider-signup" method="POST" action="/" netlify-honeypot="bot-field">
+          <!-- Bot Spam Detection -->
+          <div hidden aria-hidden="true">
+            <label>
+              Don’t fill this out if you're human:
+              <input name="bot-field" />
+            </label>
+          </div>
+          <!-- End Bot Spam Detection -->
+          <div class="form-control">
+            <div class="form-group">
+              <label for="firstName">First name (required)</label>
+              <input type="text" id="firstName" name="first-name" placeholder="First name" required />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last name (required)</label>
+              <input type="text" id="lastName" name="last-name" placeholder="Last name" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="phoneNumber">Enter your phone number (required)</label>
+            <div class="input-container">
+              <input type="text" id="phoneNumber" name="phone-number" placeholder="Phone number" required />
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+          </div>
+          <div id="phone-error" class="input-error"></div>
+
+          <div class="form-group">
+            <label for="email">Enter your email (required)</label>
+            <div class="input-container">
+              <input type="email" id="email" name="email" placeholder="Email" required />
+              <i class="fas fa-envelope"></i>
+            </div>
+          </div>
+          <div id="email-error" class="input-error"></div>
+
+          <div class="form-group">
+            <label for="password">Enter a password (required)</label>
+            <div class="input-container">
+              <input type="password" id="password" name="password" placeholder="Password" required />
+              <i class="fas fa-lock"></i>
+            </div>
+          </div>
+          <div id="password-error" class="input-error"></div>
+
+          <button class="form-submit-btn" type="submit">Sign up</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-banner">
+      <!-- <img src="./images/signup-footer.jpg" alt="" /> -->
+    </div>
+  </section>
+  <!-- End Form Section -->
+</body>
+
+</html>

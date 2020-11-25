@@ -1,0 +1,15 @@
+//Custom fonts
+//Oleo+Script - regular 400
+//Roboto - light 300, regular 400, medium 500
+body {
+  font-family: $textFont;
+  button {
+    font-family: $textFont;
+    .btn-login {
+      font-family: $textFont;
+    }
+  }
+}
+.brand {
+  font-family: $brandFont;
+}

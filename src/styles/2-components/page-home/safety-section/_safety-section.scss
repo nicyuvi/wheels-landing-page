@@ -1,0 +1,34 @@
+#safety-section {
+  .container-main {
+    @extend %mainContainer;
+    img {
+      display: block;
+      margin: auto;
+      max-height: 400px;
+    }
+    .safety-title {
+      @extend %fontHeader;
+      margin-bottom: 2em;
+    }
+    .safety-text {
+      @extend %fontMain;
+      color: $offBlack;
+      margin-bottom: 2em;
+    }
+    .safety-btn {
+      @extend %secondaryBtn;
+      @extend %fontAside;
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  #safety-section {
+    .container-main {
+      @include flexCenter(row);
+      .safety-main {
+        text-align: right;
+      }
+    }
+  }
+}
