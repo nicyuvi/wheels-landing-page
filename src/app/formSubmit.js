@@ -51,6 +51,6 @@ export const processForm = (form) => {
 /* NOTE: Add dynamic countdown functionality */
 function windowRedirect() {
   setTimeout(() => {
-    window.location.replace('https://landingpage2-yuvi.netlify.app/');
+    window.location.replace('https://wheelslandingpage.netlify.app/');
   }, 3000);
 }
