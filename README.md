@@ -1,6 +1,6 @@
 # Wheels Landing Page
 
-A landing page for the Wheels ridesharing company using html, SASS, javascript, Splide JS, US Restaurant Menus API, and Webpack
+A landing page for the Wheels ridesharing company built with html, SASS, javascript, Splide JS, US Restaurant Menus API, and Webpack
 
 View live project: https://wheelslandingpage.netlify.app/
 
@@ -22,11 +22,9 @@ View live project: https://wheelslandingpage.netlify.app/
 - Client side form validation
 - Form handling using netlify and custom page redirects using javascript
 
-### Some things I can improve
+### Problems I faced
 
-- Include tree shaking into my webpack production bundle
-- Optimizing my assets to improve load times
-- Include a linter such as Eslint
+- The trickiest part of this project was configuring Webpack for the first time.
 
 # Available Scripts
 
