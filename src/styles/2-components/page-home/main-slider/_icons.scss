@@ -2,6 +2,9 @@
 
 #main-slider-nav {
   overflow: scroll;
+  // hide scrollbar in firefox
+  scrollbar-width: none;
+  // hide scroll bar in chrome
   &::-webkit-scrollbar {
     display: none;
   }
@@ -10,10 +13,6 @@
     min-width: 765px;
     margin: 0 auto;
     background: $white;
-  }
-
-  .icons-nav::-webkit-scrollbar {
-    display: none;
   }
 
   ul {
