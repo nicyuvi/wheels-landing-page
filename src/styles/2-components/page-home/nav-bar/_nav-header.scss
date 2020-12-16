@@ -9,9 +9,14 @@
   nav {
     @include flexCenter(row);
     justify-content: space-between;
-    padding: 1.5em 0;
+    padding: 1em 0;
+    // brand padding
     .brand {
       padding: 10px;
+    }
+    // nav btns height to cover padding on btns
+    #nav-btns {
+      height: 50px;
     }
     ul {
       @include flexCenter(row);
