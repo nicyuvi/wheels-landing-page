@@ -17,16 +17,19 @@
     ul {
       @include flexCenter(row);
       li {
+        margin-left: 10px; 
         a {
           display: none;
         }
         button {
-          padding: 10px;
+          // add initial padding to btns - prevents collapsing background on mobile
+          padding: 10px 0;
           background-color: transparent;
           border: $black;
           outline: black;
           .fa-user {
             border-radius: 100%;
+            // padding for background
             padding: 10px;
             cursor: pointer;
             transition: 0.3s ease-in-out all;
@@ -40,6 +43,7 @@
 
           .btn-signup {
             background-color: white;
+            // padding for background
             padding: 10px;
             border-radius: 25px;
             cursor: pointer;
