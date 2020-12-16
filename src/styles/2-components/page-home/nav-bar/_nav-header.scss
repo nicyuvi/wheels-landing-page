@@ -14,10 +14,6 @@
     .brand {
       padding: 10px;
     }
-    // nav btns height to cover padding on btns
-    #nav-btns {
-      height: 50px;
-    }
     ul {
       @include flexCenter(row);
       li {
@@ -25,8 +21,7 @@
           display: none;
         }
         button {
-          padding: 0;
-          margin-left: 10px;
+          padding: 10px;
           background-color: transparent;
           border: $black;
           outline: black;
