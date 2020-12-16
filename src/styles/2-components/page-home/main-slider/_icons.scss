@@ -9,8 +9,7 @@
     display: none;
   }
   .icons-nav {
-    // @extend %mainContainer;
-    min-width: 765px;
+    width: 765px;
     margin: 0 auto;
     background: $white;
   }
@@ -78,6 +77,118 @@
       background: $black;
       border: none;
       transition: 0.3s ease-in-out;
+    }
+  }
+}
+
+// desktop view
+@media screen and (min-width: 1136px) {
+  // adjust width at desktop view
+  #main-slider-nav {
+    .icons-nav {
+      width: 795.2px;
+    }
+    ul {
+      li {
+        a {
+          // adjust icon width at breakpoint
+          width: 75px;
+          margin: 10px;
+        }
+      }
+      // 98.96px (icon width) + 10 (added margin) = margin left
+      .one.active ~ hr {
+        margin-left: 10px;
+      }
+
+      .two.active ~ hr {
+        margin-left: 108.96px;
+      }
+
+      .three.active ~ hr {
+        margin-left: 207.92px;
+      }
+
+      .four.active ~ hr {
+        margin-left: 306.88px;
+      }
+
+      .five.active ~ hr {
+        margin-left: 405.84px;
+      }
+
+      .six.active ~ hr {
+        margin-left: 504.8px;
+      }
+
+      .seven.active ~ hr {
+        margin-left: 603.76px;
+      }
+
+      .eight.active ~ hr {
+        margin-left: 702.72px;
+      }
+      // adjust underline width at breakpoint
+      hr {
+        width: 75px;
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+// large desktop view
+@media screen and (min-width: 1536px) {
+  // adjust width at large desktop view
+  #main-slider-nav {
+    .icons-nav {
+      width: 1075.2px;
+    }
+    ul {
+      li {
+        a {
+          // adjust icon width at breakpoint
+          width: 110px;
+          margin: 10px;
+        }
+      }
+      // 133.96px (icon width) + 10 (added margin) = margin left
+      .one.active ~ hr {
+        margin-left: 10px;
+      }
+
+      .two.active ~ hr {
+        margin-left: 143.96px;
+      }
+
+      .three.active ~ hr {
+        margin-left: 277.92px;
+      }
+
+      .four.active ~ hr {
+        margin-left: 411.88px;
+      }
+
+      .five.active ~ hr {
+        margin-left: 545.84px;
+      }
+
+      .six.active ~ hr {
+        margin-left: 679.8px;
+      }
+
+      .seven.active ~ hr {
+        margin-left: 813.76px;
+      }
+
+      .eight.active ~ hr {
+        margin-left: 947.72px;
+      }
+      // adjust underline width at breakpoint
+      hr {
+        width: 110px;
+        margin-left: 10px;
+      }
     }
   }
 }

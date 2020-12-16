@@ -6,7 +6,8 @@
   height: 940px;
   #main-slider-content {
     .main-slider-content-container {
-      @extend %mainContainer;
+      width: 90%;
+      margin: auto;
       padding-top: 0;
       .main-slider-text {
         padding: 2em;
@@ -70,5 +71,29 @@
 
   100% {
     opacity: 1;
+  }
+}
+
+// desktop view
+@media screen and (min-width: 1136px) {
+  #main-slider {
+    #main-slider-content {
+      .main-slider-content-container {
+        // adjust width at desktop view
+        width: 795.2px;
+      }
+    }
+  }
+}
+
+// large desktop view
+@media screen and (min-width: 1536px) {
+  #main-slider {
+    #main-slider-content {
+      .main-slider-content-container {
+        // adjust width at large desktop view
+        width: 1075.2px;
+      }
+    }
   }
 }
