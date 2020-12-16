@@ -1,8 +1,4 @@
 'use strict';
-import smoothscroll from 'smoothscroll-polyfill';
-
-// kick off the polyfill!
-smoothscroll.polyfill();
 
 import {
   sliderImg,
@@ -35,7 +31,7 @@ export const mainSliderNav = () => {
       //reassign active class to new element
       target.parentElement.classList.add('active');
       //scrolls element to horizontal center on click
-      // options not currently supported in ios safari so polyfill added
+      // options not currently supported in ios safari
       target.scrollIntoView({
         behavior: 'smooth',
         inline: 'center',
