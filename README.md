@@ -25,6 +25,8 @@ View live project: https://wheelslandingpage.netlify.app/
 ### Problems I faced
 
 - The trickiest part of this project was configuring Webpack for the first time.
+- I initially tried to create a moving underline slider that was responsive at all breakpoints using percents. This resulted in the underline spacing being offset from the icon it was meant to highlight at some screen widths.
+  - To solve this, I changed all percent to pixels and calculated the margin-left for the moving underline for each icon. I adjusted the margins for 3 breakpoints.
 
 # Available Scripts
 
