@@ -9,7 +9,7 @@
     display: none;
   }
   .icons-nav {
-    @extend %mainContainer;
+    // @extend %mainContainer;
     min-width: 765px;
     margin: 0 auto;
     background: $white;
@@ -23,9 +23,9 @@
 
       a {
         display: inline-block;
-        width: 10%;
+        width: 72px;
         padding: 2rem 0;
-        margin: 1%;
+        margin: 10px;
         text-decoration: none;
         color: #333;
         background: $white;
@@ -38,41 +38,42 @@
         }
       }
     }
+    // 95.96px (icon width) + 10 (added margin) = margin left
     .one.active ~ hr {
-      margin-left: 1%;
+      margin-left: 10px;
     }
 
     .two.active ~ hr {
-      margin-left: 13.5%;
+      margin-left: 105.96px;
     }
 
     .three.active ~ hr {
-      margin-left: 26%;
+      margin-left: 201.92px;
     }
 
     .four.active ~ hr {
-      margin-left: 38.5%;
+      margin-left: 297.88px;
     }
 
     .five.active ~ hr {
-      margin-left: 51.5%;
+      margin-left: 393.84px;
     }
 
     .six.active ~ hr {
-      margin-left: 63.5%;
+      margin-left: 489.8px;
     }
 
     .seven.active ~ hr {
-      margin-left: 76%;
+      margin-left: 585.76px;
     }
 
     .eight.active ~ hr {
-      margin-left: 88.5%;
+      margin-left: 681.72px;
     }
     hr {
       height: 0.25rem;
-      width: 9%;
-      margin-left: 1%;
+      width: 72px;
+      margin-left: 10px;
       margin-bottom: 0;
       background: $black;
       border: none;
