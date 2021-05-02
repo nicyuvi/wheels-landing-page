@@ -1,6 +1,6 @@
 # Wheels Landing Page
 
-A landing page for the Wheels ridesharing company built with html, SASS, javascript, Splide JS, US Restaurant Menus API, and Webpack
+A landing page for the Wheels ridesharing company built with HTML, SASS, JavaScript, Splide JS, US Restaurant Menus API, and Webpack
 
 View live project: https://wheelslandingpage.netlify.app/
 
